@@ -182,6 +182,9 @@ span {
   line-height: 1.8em;
   margin-left: 5px;
 }
+.intro-contact a {
+  color: whitesmoke;
+}
 .intro-content,
 a {
   color: #2e2e2e;
@@ -197,20 +200,51 @@ a {
   width: 80%;
   margin-bottom: 100px;
 }
+.archive-inner-sidebar {
+  margin-top: 30px;
+  width: 80%;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.archive-sidebar-posts {
+  margin-top: 30px;
+  width: 70%;
+  margin-bottom: 100px;
+}
+.archive-sidebar-years {
+  margin-top: 30px;
+  width: 15%;
+  margin-bottom: 100px;
+}
+.archive-sidebar-peryear-list-item {
+  line-height: 1.5em;
+  font-size: 1.1em;
+  transition: 0.4s;
+  font-family: Gothic;
+  list-style-position: inside;
+  margin-left: 0.7em;
+}
+.archive-sidebar-peryear-list-item:hover {
+  color: #1A936B;
+}
+.archive-sidebar-peryear-list-item:hover .archive-sidebar-peryear-list-link {
+  color: #1A936B;
+}
 .archive-name {
-  font-size: 2em;
-  margin: 40px 0px 30px 0px;
+  font-size: 1.7em;
+  margin: 45px 0px 25px 0px;
   font-family: Merriweather;
-  text-align: center;
+  text-align: left;
 }
 .archive-post {
-  line-height: 1.5em;
+  line-height: 1.3em;
   font-size: 1em;
   background-color: #fff;
   border-radius: 3px;
   transition: 0.4s;
   display: flex;
-  margin: 7px 0px;
+  margin: 1px 7px;
 }
 .archive-post:hover .archive-post-title {
   color: #1A936B;
@@ -236,10 +270,18 @@ a {
   text-align: center;
 }
 .paginator .page-number {
-  display: none;
+  margin: 0 10px;
+  background-color: #EDFAF6;
+  color: #1A936B;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 1000;
+  transition: all 0.4s;
 }
-.paginator .space {
-  display: none;
+.paginator .page-number:hover {
+  color: #fff;
+  background-color: #1A936B;
 }
 .paginator .extend {
   margin: 0 10px;
@@ -252,6 +294,10 @@ a {
   transition: all 0.4s;
 }
 .paginator .extend:hover {
+  color: #fff;
+  background-color: #1A936B;
+}
+.paginator .current {
   color: #fff;
   background-color: #1A936B;
 }
@@ -999,37 +1045,117 @@ li p {
 .tags-sections {
   display: flex;
   justify-content: space-between;
-  row-gap: 20px /*row column*/;
+  row-gap: 30px /*row column*/;
   flex-wrap: wrap;
   margin: 40px 2.5% 10px 2.5% /* top | right | bottom | left */;
   padding: 30px 0 10px 0;
   line-height: 1;
   position: relative;
+/*&:before
+      content ""
+      position absolute
+      top 15%
+      left 49.95%
+      right 49.95%
+      bottom 5%
+      transition all .3s
+      background-color $color-theme-main*/
 }
 .tags-sections:after {
   content: "";
   position: absolute;
   top: 0;
-  left: 37%;
-  right: 37%;
+  left: 0%;
+  right: 0%;
   bottom: 99.5%;
   transition: all 0.3s;
   background-color: #1A936B;
 }
 .tags-each {
   flex-basis: 45%;
-  border-width: 1px;
-  border-radius: 5px;
-  border-color: #dcdedd;
+/*
+  border-top-style: solid
+  border-width: 1px
+  border-radius: 5px
+  border-color: #DCDEDD
+  */
   align-self: flex-start;
 }
 .tags-each-title {
-  font-size: 1.5em;
-  margin: 15px 0px 15px 0px;
+  font-size: 1.3em;
+  margin: 10px 0px 10px 0px;
   font-family: Merriweather;
-  text-align: center;
+  text-align: left;
   color: #1A936B;
+  line-height: 1.5em;
+  padding: 5px 5px;
+  background-color: #EDFAF6;
 }
 .tag-each-li {
   margin-bottom: -2.5%;
+  list-style: none;
+}
+.talks-name {
+  font-size: 1.7em;
+  margin: 45px 0px 5px 0px;
+  font-family: Merriweather;
+  text-align: left;
+}
+.talks-post {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.talks-post-date {
+  width: 100%;
+  line-height: 1.5em;
+  font-family: Merriweather;
+  color: #1A936B;
+  font-weight: 1000;
+  background-color: #fff;
+  font-size: 1.1em;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin: 20px 0px 5px 0px;
+  transition: all 0.4s;
+}
+.talks-post-content {
+  width: 100%;
+  font-size: 1em;
+  transition: 0.4s;
+  font-family: Gothic;
+  padding: 10px 20px;
+  margin: 0px 20px 0px 20px;
+  background-color: #EDFAF6;
+}
+.about-post-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 0 2em 0;
+}
+.about-img-container {
+  position: relative;
+  width: 10%;
+  height: 0;
+  padding-top: 10%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0.2em 2em 0.2em 0;
+  clear: both;
+}
+.about-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+.about-section-title {
+  width: 100%;
+  margin: 0 0 0.2em 0;
 }
